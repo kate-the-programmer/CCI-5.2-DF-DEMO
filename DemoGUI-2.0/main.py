@@ -45,14 +45,19 @@ class DigitalForensicsDemo(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Digital Forensics Demo")
-        self.geometry("800x600")
+        # Track fullscreen state
+        self.is_fullscreen = True
+        # Set window to fullscreen mode
+        if platform.system() == 'Windows':
+            self.state('zoomed')  # Windows fullscreen
+        else:
+            self.attributes('-fullscreen', True)  # Linux/Mac fullscreen
         self.configure(bg="#000000")  # Black background
         self.image_label = None  # Will store the image widget when needed
         self.tooltip_windows = {}  # Dictionary to store tooltip windows
         self.current_status = "Ready"  # Current status message
         self.operation_start_time = None  # For tracking operation timing
         self.active_progress_tasks = {}  # Track active progress tasks
-        
         # Define theme colors
         self.themes = {
             "dark": {
@@ -179,6 +184,9 @@ class DigitalForensicsDemo(tk.Tk):
         self.bind('<Control-r>', lambda e: self.handle_raid())
         self.bind('<Control-w>', lambda e: self.handle_writeblocker())
         self.bind('<Control-s>', lambda e: self.handle_ransomware())
+        # Add fullscreen toggle bindings
+        self.bind('<F11>', lambda e: self.toggle_fullscreen())
+        self.bind('<Escape>', lambda e: self.toggle_fullscreen())
     def create_styled_button(self, parent, text, command=None, **kwargs):
         """Create a styled button with subtle top and left borders"""
         # Create a frame to hold the button and provide custom border effect
@@ -624,27 +632,34 @@ class DigitalForensicsDemo(tk.Tk):
     
     def update_clock(self):
         """Update the clock display in the status bar"""
-        import datetime
-        current_time = datetime.datetime.now().strftime("%H:%M:%S")
-        self.clock_label.config(text=current_time)
-        
-        # Update resource monitor along with clock
-        self.update_resource_monitor()
-        
-        # Update every second
-        self.after(1000, self.update_clock)
+        try:
+            import datetime
+            current_time = datetime.datetime.now().strftime("%H:%M:%S")
+            # Check if widget still exists before updating
+            if self.clock_label.winfo_exists():
+                self.clock_label.config(text=current_time)
+            
+                # Update resource monitor along with clock
+                self.update_resource_monitor()
+            
+                # Update every second
+                self.after(1000, self.update_clock)
+        except Exception as e:
+            # Silently handle errors during shutdown
+            print(f"Error updating clock: {e}")
     
     def update_resource_monitor(self):
         """Update the system resource monitor in the status bar"""
         if not PSUTIL_AVAILABLE:
-            self.resource_label.config(text="CPU: N/A | MEM: N/A")
+            if self.resource_label.winfo_exists():
+                self.resource_label.config(text="CPU: N/A | MEM: N/A")
             return
         
         try:
             # Get CPU usage (average across all cores)
             cpu_percent = psutil.cpu_percent(interval=None)
             
-            # Get memory usage
+            # Get memory information
             memory = psutil.virtual_memory()
             mem_percent = memory.percent
             
@@ -663,12 +678,47 @@ class DigitalForensicsDemo(tk.Tk):
             else:
                 color = "#00FF00"  # Green
                 
-            # Update the label
-            self.resource_label.config(text=resource_text, fg=color)
+            # Update the label if it still exists
+            if self.resource_label.winfo_exists():
+                self.resource_label.config(text=resource_text, fg=color)
             
         except Exception as e:
             print(f"Error updating resource monitor: {e}")
-            self.resource_label.config(text="CPU: ERR | MEM: ERR")
+            if self.resource_label.winfo_exists():
+                self.resource_label.config(text="CPU: ERR | MEM: ERR")
+    def toggle_fullscreen(self):
+        """Toggle between fullscreen and windowed mode
+        
+        Switches the application between fullscreen and windowed mode based on current state.
+        Uses platform-specific methods for Windows vs other operating systems.
+        """
+        try:
+            if self.is_fullscreen:
+                # Switch to windowed mode
+                if platform.system() == 'Windows':
+                    self.state('normal')
+                else:
+                    self.attributes('-fullscreen', False)
+                self.geometry('1024x768')  # Default windowed size
+                self.is_fullscreen = False
+                self.display_output("Exited fullscreen mode. Press F11 to restore.")
+            else:
+                # Switch to fullscreen
+                if platform.system() == 'Windows':
+                    self.state('zoomed')
+                else:
+                    self.attributes('-fullscreen', True)
+                self.is_fullscreen = True
+                self.display_output("Entered fullscreen mode. Press ESC or F11 to exit.")
+        except Exception as e:
+            print(f"Error toggling fullscreen mode: {e}")
+            # Attempt to reset to a safe state
+            if platform.system() == 'Windows':
+                self.state('normal')
+            else:
+                self.attributes('-fullscreen', False)
+            self.geometry('1024x768')
+            self.is_fullscreen = False
     
     def update_status(self, message):
         """Update the status bar message"""
@@ -1557,7 +1607,17 @@ For more detailed information about RAID technology and forensic analysis of RAI
             # Create the Toplevel window for RAID visualization
             raid_toplevel = tk.Toplevel(self)
             raid_toplevel.title("RAID Visualization")
-            raid_toplevel.geometry("1000x700")
+            
+            # Calculate 90% of screen size and center position
+            screen_width = self.winfo_screenwidth()
+            screen_height = self.winfo_screenheight()
+            window_width = int(screen_width * 0.9)
+            window_height = int(screen_height * 0.9)
+            pos_x = (screen_width - window_width) // 2
+            pos_y = (screen_height - window_height) // 2
+            
+            # Set window geometry to 90% of screen size and centered
+            raid_toplevel.geometry(f"{window_width}x{window_height}+{pos_x}+{pos_y}")
             
             # Create the RAID visualization app with the Toplevel window
             raid_window = raid.RAIDVisualizationApp(raid_toplevel)
@@ -1644,7 +1704,17 @@ For more detailed information about RAID technology and forensic analysis of RAI
             # Create a toplevel window for the Write Blocker GUI
             blocker_toplevel = tk.Toplevel(self)
             blocker_toplevel.title("🔒 Write Blocker Demo")
-            blocker_toplevel.geometry("1280x720")
+            
+            # Calculate 90% of screen size and center position
+            screen_width = self.winfo_screenwidth()
+            screen_height = self.winfo_screenheight()
+            window_width = int(screen_width * 0.9)
+            window_height = int(screen_height * 0.9)
+            pos_x = (screen_width - window_width) // 2
+            pos_y = (screen_height - window_height) // 2
+            
+            # Set window geometry to 90% of screen size and centered
+            blocker_toplevel.geometry(f"{window_width}x{window_height}+{pos_x}+{pos_y}")
             blocker_toplevel.configure(bg=write_blocker_gui.BACKGROUND_COLOR)
             
             # Define the switch_to_main function that will be passed to WriteBlockerIntro
@@ -1684,7 +1754,17 @@ For more detailed information about RAID technology and forensic analysis of RAI
             # Create a toplevel window for the John the Ripper GUI
             john_toplevel = tk.Toplevel(self)
             john_toplevel.title("🔐 John the Ripper Password Cracking Demo")
-            john_toplevel.geometry("1280x720")
+            
+            # Calculate 90% of screen size and center position
+            screen_width = self.winfo_screenwidth()
+            screen_height = self.winfo_screenheight()
+            window_width = int(screen_width * 0.9)
+            window_height = int(screen_height * 0.9)
+            pos_x = (screen_width - window_width) // 2
+            pos_y = (screen_height - window_height) // 2
+            
+            # Set window geometry to 90% of screen size and centered
+            john_toplevel.geometry(f"{window_width}x{window_height}+{pos_x}+{pos_y}")
             john_toplevel.configure(bg=john_ripper_gui.BACKGROUND_COLOR)
             
             # Define the switch_to_demo function that will be passed to IntroScreen
@@ -1811,7 +1891,17 @@ For more detailed information about RAID technology and forensic analysis of RAI
             # Create new window for ransomware demo
             ransomware_window = tk.Toplevel(self)
             ransomware_window.title("Ransomware Demonstration")
-            ransomware_window.geometry("1100x880")
+            
+            # Calculate 90% of screen size and center position
+            screen_width = self.winfo_screenwidth()
+            screen_height = self.winfo_screenheight()
+            window_width = int(screen_width * 0.9)
+            window_height = int(screen_height * 0.9)
+            pos_x = (screen_width - window_width) // 2
+            pos_y = (screen_height - window_height) // 2
+            
+            # Set window geometry to 90% of screen size and centered
+            ransomware_window.geometry(f"{window_width}x{window_height}+{pos_x}+{pos_y}")
             
             # Create the ransomware demo instance
             demo = ransom.RansomwareDemo(ransomware_window)

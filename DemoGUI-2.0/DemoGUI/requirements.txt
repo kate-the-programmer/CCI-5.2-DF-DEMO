@@ -1,0 +1,5 @@
+# Tkinter is part of the Python standard library, no separate installation required
+
+# Python version requirement
+python >= 3.6
+
