@@ -1,47 +1,99 @@
-# RAID Configurations Demo
+# 🔍 Digital Forensics Demonstration Platform
 
-This Python script creates an interactive graphical demonstration of RAID (Redundant Array of Independent Disks) configurations, specifically RAID 0 (Striping), RAID 1 (Mirroring), and RAID 5 (Striping with Parity). It uses a GUI built with `tkinter` and `Pillow` to visualize how data is distributed across disks, with clickable blocks to explore detailed information about data segments, memory addresses, and parity calculations.
+![GitHub repo size](https://img.shields.io/github/repo-size/kate-the-programmer/CCI-5.2-DF-DEMO?style=for-the-badge)  
+![GitHub issues](https://img.shields.io/github/issues/kate-the-programmer/CCI-5.2-DF-DEMO?style=for-the-badge)  
+![GitHub license](https://img.shields.io/github/license/kate-the-programmer/CCI-5.2-DF-DEMO?style=for-the-badge)
 
-## Features
-- Visualize RAID 0, RAID 1, RAID 5, and RAID 1+0 configurations with vibrant, rounded blocks.
-- Click on blocks to see detailed information, including sample data, memory addresses, and parity calculations.
-- Uses a 64-byte sample file (`sample.txt`) to simulate real data distribution.
+An interactive, **Raspberry Pi-based cybersecurity training environment** developed under **DOE CCI Subtask 5.2** at NCREPT. This platform unifies multiple **digital forensics and cybersecurity simulations** into a single Python GUI, designed for **classrooms, labs, and outreach events**.  
 
-## Prerequisites
-Before running the script, ensure you have the following installed:
+---
 
-- **Python 3.12** (or later)
-- **Pillow** (Python Imaging Library) version 11.1.0 or later
-- **tkinter** (usually included with Python)
+## 📖 Table of Contents
+- [Features](#-features)
+- [Modules](#-modules)
+- [Requirements](#️-requirements)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Documentation](#-documentation)
+- [Contributing](#-contributing)
 
-## Installation
 
-1. **Download the Files**
-   - Download `raid.py` and `sample.txt` to a directory of your choice on your computer.
+---
 
-2. **Install Dependencies**
-   - Open a terminal or Command Prompt and navigate to the directory containing `raid.py`.
-   - Install `Pillow` if not already installed:
-     ```bash
-     python -m pip install pillow
-     ```
-   - Verify `Pillow` and `tkinter` are installed:
-     ```bash
-     python -c "import PIL; print(PIL.__version__)"
-     python -c "import tkinter; print(tkinter.TkVersion)"
-     ```
-     - Expected output: `11.1.0` for `PIL` and a version like `8.6` for `tkinter`.
+## 🚀 Features
+- Centralized **Tkinter GUI** with a hacker-themed design.  
+- **10 interactive forensic modules** + **CTF challenges** for gamified learning.  
+- **Open-source tools** integrated (Autopsy, Volatility, John the Ripper, Hashcat, Wireshark, Stegosuite, etc.).  
+- **Safe, sandboxed simulations** for ransomware, malware, and password cracking.  
+- **Portable Raspberry Pi build** with kiosk auto-launch for quick deployment.  
 
-3. **Ensure `sample.txt` Exists**
-   - The script expects a file named `sample.txt` in the same directory with the content:
-     ```
-     This is a sample file to demonstrate RAID configurations with 64 bytes of data.
-     ```
-   - If missing, the script will create it automatically when run.
+---
 
-## Running the Script
+## 🧩 Modules
 
-1. Navigate to the directory containing `raid.py` (e.g., using `cd` in Command Prompt or PowerShell).
-2. Run the script using Python:
-   ```bash
-   python raid.py
+| #      | Module                              | Key Concepts                                               |
+|--------|-------------------------------------|-----------------------------------------------------------|
+| 2.1.1  | Autopsy Forensics                  | Disk image analysis, deleted file recovery                |
+| 2.1.2  | Write Blocker Simulation           | Evidence integrity, hardware protections                  |
+| 2.1.3  | Ransomware Simulation              | File encryption, backups, incident response               |
+| 2.1.4  | Password Cracking                  | Dictionary & brute-force attacks, password security       |
+| 2.1.5  | Memory Forensics                   | Volatility analysis of live processes and injected code   |
+| 2.1.6  | Network Forensics                  | Packet analysis, threat hunting using Tshark              |
+| 2.1.7  | Metadata Forensics                 | Hidden file metadata, timelines, GPS/device IDs           |
+| 2.1.8  | Steganography Detection            | Hidden messages in images via Stegosuite                  |
+| 2.1.9  | Malware Static Analysis            | Strings, imports, entropy checks, radare2 disassembly     |
+| 2.1.10 | Capture The Flag (CTF) Challenges  | Gamified multi-tool investigation                         |
+
+---
+
+## ️🛠 Requirements
+- **Hardware:** Raspberry Pi 4 (4GB+ recommended), keyboard, mouse, HDMI display.  
+- **OS:** Kali Linux or compatible Debian-based OS.  
+- **Dependencies:**  
+  ```bash
+  sudo apt update
+  sudo apt install python3-tk autopsy volatility3 john hashcat tshark stegosuite radare2 exiftool make
+  ```
+
+---
+
+## 📥 Installation
+```bash
+git clone https://github.com/kate-the-programmer/CCI-5.2-DF-DEMO.git
+cd CCI-5.2-DF-DEMO
+python3 main.py
+```
+
+For **auto-launch on boot**, add the startup command to your `.bashrc` or system startup scripts.
+
+---
+
+## 🎮 Usage
+- **Dashboard:** Choose a demo module or CTF challenge.  
+- **Keyboard Shortcuts:**  
+  - `Ctrl+A` → Autopsy Demo  
+  - `Ctrl+R` → RAID Demo  
+  - `Ctrl+W` → Write Blocker Demo  
+  - `Ctrl+Shift+Q` → Exit GUI  
+- **CTF Mode:** Solve forensic challenges, find flags (`Flag{example}`), and score points.  
+- **Documentation:** PDFs and ReadMe files for each module are available in `/Assets`.
+
+---
+
+## 📚 Documentation
+Full user documentation is available in:
+- `/docs/Digital_Forensics_Documentation.docx`  
+- `/Assets` for module-specific PDF guides and step-by-step instructions.
+
+---
+
+## 🤝 Contributing
+We welcome contributions from the cybersecurity education community:
+1. **Fork** the repo  
+2. Create a **feature branch**  
+3. Submit a **pull request** with detailed notes  
+4. Open **issues** for bug reports or enhancements  
+
+---
+
+> ⚠️ **Disclaimer:** This project is for **educational use only**. Do not use forensic or offensive tools on unauthorized systems or live evidence.
