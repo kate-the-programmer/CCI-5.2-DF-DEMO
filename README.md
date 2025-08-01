@@ -82,7 +82,7 @@ For **auto-launch on boot**, add the startup command to your `.bashrc` or system
 
 ## 📚 Documentation
 Full user documentation is available in:
-- `/docs/Digital_Forensics_Documentation.docx`  
+- `/Digital_Forensics_Documentation.docx`  
 - `/Assets` for module-specific PDF guides and step-by-step instructions.
 
 ---
@@ -97,3 +97,4 @@ We welcome contributions from the cybersecurity education community:
 ---
 
 > ⚠️ **Disclaimer:** This project is for **educational use only**. Do not use forensic or offensive tools on unauthorized systems or live evidence.
+
