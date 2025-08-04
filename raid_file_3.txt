@@ -1,0 +1,1 @@
+PARTThis is a sample file for RAID 1 mirror 3.

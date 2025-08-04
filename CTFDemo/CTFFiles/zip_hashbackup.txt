@@ -1,0 +1,1 @@
+secret.zip/somefile.txt:$pkzip$1*1*2*0*3c*38*1fdf90de*0*46*8*3c*69c8*e8729f7f5773e2a00d25df388a1374d98a07e0115547bf1ff2e4e4b8aa80a78aa46008ddc93ec332f43018c3f8ee6f105ee46cf02377a2302c0750d8*$/pkzip$:somefile.txt:secret.zip::/home/kali/Desktop/Master DemoGUI 2.0/DemoGUI-2.0/CTFDemo/CTFFiles/secret.zip

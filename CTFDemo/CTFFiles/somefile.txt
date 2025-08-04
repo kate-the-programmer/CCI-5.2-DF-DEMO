@@ -1,0 +1,8 @@
+Password List:
+Flag{j0hnth3H4shc4t}
+password123
+admin
+kali
+superadmin
+bigman
+Flag{j0hnth3H4shc4t}

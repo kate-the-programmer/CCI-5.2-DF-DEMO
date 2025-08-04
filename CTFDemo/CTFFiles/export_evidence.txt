@@ -1,0 +1,28 @@
+[Autopsy Simulation] Exported Evidence from sample.mem
+----------------------------------------
+Export completed at 2024-01-20 09:15:00
+- Extracted file: /hidden/data.bin
+  Content snippet: "...Flag{AU70P5Y} encoded in binary format... Additional data: 0xA1B2C3D4..."
+  Metadata: Created 2024-01-18 13:45, Size: 1 KB
+- Extracted file: /hidden/backup_data.bin
+  Content snippet: "Backup data segment: ...encrypted block detected... Possible key: 0xKEY101..."
+  Metadata: Created 2024-01-18 13:00, Modified 2024-01-18 14:10, Size: 2 KB
+- Extracted file: /evidence/clue.pdf
+  Content snippet: "Investigation notes: Check binary data for the solution. Suspect activity logged at 13:45."
+  Metadata: Created 2024-01-18 13:30, Modified 2024-01-18 14:00, Size: 8 KB
+- Extracted file: /evidence/case_file.pdf
+  Content snippet: "Case details: Unauthorized access detected. Cross-reference with /hidden/data.bin."
+  Metadata: Created 2024-01-18 12:45, Modified 2024-01-18 13:50, Size: 10 KB
+- Extracted file: /logs/system_log.txt
+  Content snippet: "System event: Unauthorized access detected at 2024-01-18 13:45. Error code: 0xERROR101."
+  Metadata: Created 2024-01-16 15:00, Modified 2024-01-17 10:05, Size: 5 KB
+- Extracted file: /logs/access_log.csv
+  Content snippet: "Access log: 2024-01-18 08:00 - suspicious.exe executed, 2024-01-18 13:45 - data.bin created."
+  Metadata: Created 2024-01-17 14:00, Modified 2024-01-18 08:30, Size: 10 KB
+- Extracted file: /temp/encrypted_data.dat
+  Content snippet: "Encrypted block: ...possible flag fragment... decode with key from settings.ini..."
+  Metadata: Created 2024-01-17 15:00, Modified 2024-01-18 13:00, Size: 150 KB
+- Extracted file: /config/settings.ini
+  Content snippet: "Config settings: Encryption key=0xKEY101, Backup location=/hidden/backup_data.bin"
+  Metadata: Created 2024-01-16 09:15, Modified 2024-01-17 16:30, Size: 3 KB
+[HINT] The flag might be embedded in the binary data—decode it using clues from the config or logs.

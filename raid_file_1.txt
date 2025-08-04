@@ -1,0 +1,1 @@
+FLAGThis is a sample file for RAID 1 mirror 1.

@@ -1,0 +1,6 @@
+Password List:
+password123
+admin
+kali
+superadmin
+bigman

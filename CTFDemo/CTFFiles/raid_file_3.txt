@@ -1,0 +1,1 @@
+RAID 1: Mirroring - Identical data is written to two disks for redundancy. 

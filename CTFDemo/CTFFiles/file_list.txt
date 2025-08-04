@@ -1,0 +1,26 @@
+[Autopsy Simulation] File List for sample.mem
+----------------------------------------
+Total files: 22
+- /documents/report.docx (Size: 12 KB, Modified: 2024-01-15 09:15, Created: 2024-01-14 14:30)
+- /documents/investigation_notes.txt (Size: 8 KB, Modified: 2024-01-16 10:20, Created: 2024-01-15 09:00)
+- /images/photo.jpg (Size: 2 MB, Modified: 2024-01-16 14:20, Created: 2024-01-15 13:45)
+- /images/snapshot.png (Size: 1.5 MB, Modified: 2024-01-17 11:10, Created: 2024-01-16 09:30)
+- /logs/system_log.txt (Size: 5 KB, Modified: 2024-01-17 10:05, Created: 2024-01-16 15:00)
+- /logs/access_log.csv (Size: 10 KB, Modified: 2024-01-18 08:30, Created: 2024-01-17 14:00)
+- /hidden/data.bin (Size: 1 KB, Modified: 2024-01-18 13:45, Created: 2024-01-18 12:00)
+- /hidden/backup_data.bin (Size: 2 KB, Modified: 2024-01-18 14:10, Created: 2024-01-18 13:00)
+- /config/settings.ini (Size: 3 KB, Modified: 2024-01-17 16:30, Created: 2024-01-16 09:15)
+- /config/config_backup.ini (Size: 4 KB, Modified: 2024-01-18 09:00, Created: 2024-01-17 10:30)
+- /executables/suspicious.exe (Size: 500 KB, Modified: 2024-01-18 08:00, Created: 2024-01-17 15:45)
+- /executables/security_update.exe (Size: 600 KB, Modified: 2024-01-17 13:00, Created: 2024-01-16 11:20)
+- /notes/note.txt (Size: 2 KB, Modified: 2024-01-16 11:10, Created: 2024-01-15 14:00)
+- /notes/daily_log.txt (Size: 3 KB, Modified: 2024-01-18 12:30, Created: 2024-01-17 09:00)
+- /backups/backup.zip (Size: 10 MB, Modified: 2024-01-17 19:00, Created: 2024-01-16 16:15)
+- /backups/archive_backup.zip (Size: 12 MB, Modified: 2024-01-18 10:00, Created: 2024-01-17 14:30)
+- /temp/temp_file.dat (Size: 100 KB, Modified: 2024-01-18 12:00, Created: 2024-01-17 11:45)
+- /temp/encrypted_data.dat (Size: 150 KB, Modified: 2024-01-18 13:00, Created: 2024-01-17 15:00)
+- /evidence/clue.pdf (Size: 8 KB, Modified: 2024-01-18 14:00, Created: 2024-01-18 13:30)
+- /evidence/case_file.pdf (Size: 10 KB, Modified: 2024-01-18 13:50, Created: 2024-01-18 12:45)
+- /hidden/secret_folder/info.txt (Size: 1 KB, Modified: 2024-01-18 14:05, Created: 2024-01-18 13:55)
+- /documents/credentials.txt (Size: 4 KB, Modified: 2024-01-17 15:00, Created: 2024-01-16 14:30)
+[HINT] Check files with recent modification dates or unusual extensions for hidden content.

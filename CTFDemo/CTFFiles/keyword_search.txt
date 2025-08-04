@@ -1,0 +1,23 @@
+[Autopsy Simulation] Keyword Search Results for sample.mem
+----------------------------------------
+Search completed at 2024-01-18 14:32:15.
+Total keywords matched: 35
+- Keyword "evidence" found in file: /documents/report.docx (3 instances)
+- Keyword "evidence" found in file: /notes/investigation_notes.txt (2 instances)
+- Keyword "crime" found in file: /logs/system_log.txt (1 instance)
+- Keyword "crime" found in file: /evidence/case_file.pdf (4 instances)
+- Keyword "flag" found in file: /hidden/data.bin (2 instances)
+- Keyword "flag" found in file: /backups/backup_archive.zip (1 instance)
+- Keyword "secret" found in file: /config/settings.ini (4 instances)
+- Keyword "secret" found in file: /temp/encrypted_data.dat (3 instances)
+- Keyword "password" found in file: /documents/credentials.txt (5 instances)
+- Keyword "access" found in file: /logs/access_log.csv (2 instances)
+- Keyword "security" found in file: /executables/security_update.exe (3 instances)
+- Keyword "data" found in file: /hidden/backup_data.bin (6 instances)
+- Keyword "investigation" found in file: /notes/daily_log.txt (2 instances)
+- Keyword "report" found in file: /documents/monthly_report.docx (4 instances)
+- Keyword "suspicious" found in file: /executables/malware_sample.exe (3 instances)
+- Keyword "log" found in file: /logs/error_log.txt (5 instances)
+- Keyword "file" found in file: /temp/temp_file.dat (2 instances)
+- Keyword "hidden" found in file: /hidden/secret_folder/info.txt (1 instance)
+[HINT] Look for files with multiple keyword matches—some may contain encoded data that requires further analysis.

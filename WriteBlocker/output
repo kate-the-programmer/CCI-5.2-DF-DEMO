@@ -1,0 +1,41 @@
+🧩 Checking SSD connection...
+NAME        MAJ:MIN RM   SIZE RO TYPE   MOUNTPOINTS
+sda           8:0    1   7.5G  0 disk   
+└─sda1        8:1    1   7.5G  0 part   /media/kali/USB DISK
+sdb           8:16   0 465.8G  0 disk   
+└─sdb1        8:17   0 465.8G  0 part   
+  └─md0       9:0    0 931.3G  0 raid10 /mnt/raid0
+sdc           8:32   0 465.8G  0 disk   
+└─sdc1        8:33   0 465.8G  0 part   
+  └─md0       9:0    0 931.3G  0 raid10 /mnt/raid0
+sdd           8:48   0 465.8G  0 disk   
+└─sdd1        8:49   0 465.8G  0 part   
+  └─md0       9:0    0 931.3G  0 raid10 /mnt/raid0
+sde           8:64   0 465.8G  0 disk   
+└─sde1        8:65   0 465.8G  0 part   
+  └─md0       9:0    0 931.3G  0 raid10 /mnt/raid0
+sdf           8:80   0 465.8G  1 disk   
+└─sdf1        8:81   0 465.8G  1 part   
+mmcblk0     179:0    0 119.4G  0 disk   
+├─mmcblk0p1 179:1    0   255M  0 part   /boot/firmware
+└─mmcblk0p2 179:2    0 119.1G  0 part   /
+🪵 Checking kernel messages...
+[10571.558893] usb 3-2: SerialNumber: 000ECC9500354213
+[10571.567018] scsi host6: uas
+[10571.570364] scsi 6:0:0:0: Direct-Access     Samsung  SSD 860          3B6Q PQ: 0 ANSI: 6
+[10571.581597] sd 6:0:0:0: Attached scsi generic sg5 type 0
+[10571.588907] sd 6:0:0:0: [sdf] 976773168 512-byte logical blocks: (500 GB/466 GiB)
+[10571.596851] sd 6:0:0:0: [sdf] Write Protect is on
+[10571.601676] sd 6:0:0:0: [sdf] Mode Sense: 24 00 80 00
+[10571.601971] sd 6:0:0:0: [sdf] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[10571.619716]  sdf: sdf1
+[10571.622603] sd 6:0:0:0: [sdf] Attached SCSI disk
+🔎 Checking read-only status (lsblk)...
+sdf          1 465.8G 
+└─sdf1       1 465.8G
+📄 Checking mount options...
+/dev/sdf1 on /mnt/WRITE_BLOCKER_SSD type ext4 (ro,relatime)
+Note: The 'ro' (read-only) option indicates the SSD is write-protected, preserving evidence integrity.
+✍️ Attempting to write to /mnt/WRITE_BLOCKER_SSD/evidence.txt...
+🚫 PermissionError: Device is likely write-protected.
+This indicates the write blocker is functioning, preventing data modification.

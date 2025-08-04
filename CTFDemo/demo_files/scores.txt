@@ -1,0 +1,101 @@
+{
+  "Billybob": {
+    "RAID": 0,
+    "Ransomware": 0,
+    "Memory Forensics": 0,
+    "Network Forensics": 0,
+    "Autopsy": 0,
+    "Steganography": 0,
+    "Password Cracking": 0,
+    "Metadata Forensics": 0,
+    "Malware Static Analysis": 0
+  },
+  "BobbyBill": {
+    "RAID": 0,
+    "Ransomware": 0,
+    "Memory Forensics": 0,
+    "Network Forensics": 0,
+    "Autopsy": 0,
+    "Steganography": 0,
+    "Password Cracking": 0,
+    "Metadata Forensics": 0,
+    "Malware Static Analysis": 0
+  },
+  "Bob": {
+    "RAID": 0,
+    "Ransomware": 0,
+    "Memory Forensics": 0,
+    "Network Forensics": 0,
+    "Autopsy": 0,
+    "Steganography": 0,
+    "Password Cracking": 0,
+    "Metadata Forensics": 0,
+    "Malware Static Analysis": 0
+  },
+  "bobby": {
+    "RAID": 0,
+    "Ransomware": 0,
+    "Memory Forensics": 0,
+    "Network Forensics": 0,
+    "Autopsy": 0,
+    "Steganography": 0,
+    "Password Cracking": 0,
+    "Metadata Forensics": 0,
+    "Malware Static Analysis": 0
+  },
+  "billy": {
+    "RAID": 0,
+    "Ransomware": 0,
+    "Memory Forensics": 0,
+    "Network Forensics": 0,
+    "Autopsy": 0,
+    "Steganography": 0,
+    "Password Cracking": 0,
+    "Metadata Forensics": 0,
+    "Malware Static Analysis": 0
+  },
+  "billy bob": {
+    "RAID": 0,
+    "Ransomware": 0,
+    "Memory Forensics": 0,
+    "Network Forensics": 0,
+    "Autopsy": 0,
+    "Steganography": 0,
+    "Password Cracking": 0,
+    "Metadata Forensics": 0,
+    "Malware Static Analysis": 0
+  },
+  "Billy Bob": {
+    "RAID": 0,
+    "Ransomware": 0,
+    "Memory Forensics": 0,
+    "Network Forensics": 0,
+    "Autopsy": 0,
+    "Steganography": 0,
+    "Password Cracking": 0,
+    "Metadata Forensics": 0,
+    "Malware Static Analysis": 0
+  },
+  "billybob": {
+    "RAID": 0,
+    "Ransomware": 0,
+    "Memory Forensics": 0,
+    "Network Forensics": 0,
+    "Autopsy": 0,
+    "Steganography": 0,
+    "Password Cracking": 0,
+    "Metadata Forensics": 0,
+    "Malware Static Analysis": 0
+  },
+  "b": {
+    "RAID": 0,
+    "Ransomware": 0,
+    "Memory Forensics": 0,
+    "Network Forensics": 0,
+    "Autopsy": 0,
+    "Steganography": 0,
+    "Password Cracking": 0,
+    "Metadata Forensics": 0,
+    "Malware Static Analysis": 0
+  }
+}

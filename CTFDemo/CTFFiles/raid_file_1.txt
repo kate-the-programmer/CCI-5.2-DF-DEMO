@@ -1,0 +1,1 @@
+RAID 0 - RAID 0: Striping - Data is split across multiple disks to increase read/write speeds.

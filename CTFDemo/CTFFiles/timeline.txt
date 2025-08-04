@@ -1,0 +1,43 @@
+[Autopsy Simulation] Timeline for sample.mem
+----------------------------------------
+Generated on 2024-01-20 09:00:00
+- 2024-01-14 14:30:00 - File /documents/report.docx created
+- 2024-01-15 09:00:00 - File /documents/investigation_notes.txt created
+- 2024-01-15 09:15:00 - File /documents/report.docx modified
+- 2024-01-15 13:45:00 - File /images/photo.jpg created
+- 2024-01-16 09:15:00 - File /config/settings.ini created
+- 2024-01-16 09:30:00 - File /images/snapshot.png created
+- 2024-01-16 11:10:00 - File /notes/note.txt modified
+- 2024-01-16 11:20:00 - File /executables/security_update.exe created
+- 2024-01-16 14:00:00 - File /notes/note.txt created
+- 2024-01-16 14:20:00 - File /images/photo.jpg modified
+- 2024-01-16 15:00:00 - File /logs/system_log.txt created
+- 2024-01-17 09:00:00 - File /notes/daily_log.txt created
+- 2024-01-17 10:05:00 - File /logs/system_log.txt accessed
+- 2024-01-17 10:30:00 - File /config/config_backup.ini created
+- 2024-01-17 11:45:00 - File /temp/temp_file.dat created
+- 2024-01-17 13:00:00 - File /executables/security_update.exe modified
+- 2024-01-17 14:00:00 - File /logs/access_log.csv created
+- 2024-01-17 14:30:00 - File /backups/archive_backup.zip created
+- 2024-01-17 15:00:00 - File /documents/credentials.txt created
+- 2024-01-17 15:45:00 - File /executables/suspicious.exe created
+- 2024-01-17 16:15:00 - File /backups/backup.zip created
+- 2024-01-17 16:30:00 - File /config/settings.ini modified
+- 2024-01-17 19:00:00 - File /backups/backup.zip modified
+- 2024-01-18 08:00:00 - File /executables/suspicious.exe executed
+- 2024-01-18 08:30:00 - File /logs/access_log.csv modified
+- 2024-01-18 09:00:00 - File /config/config_backup.ini modified
+- 2024-01-18 10:00:00 - File /backups/archive_backup.zip modified
+- 2024-01-18 11:10:00 - File /images/snapshot.png accessed
+- 2024-01-18 12:00:00 - File /temp/temp_file.dat modified
+- 2024-01-18 12:30:00 - File /notes/daily_log.txt modified
+- 2024-01-18 12:45:00 - File /evidence/case_file.pdf created
+- 2024-01-18 13:00:00 - File /temp/encrypted_data.dat created
+- 2024-01-18 13:30:00 - File /evidence/clue.pdf created
+- 2024-01-18 13:45:00 - File /hidden/data.bin created
+- 2024-01-18 13:50:00 - File /evidence/case_file.pdf modified
+- 2024-01-18 13:55:00 - File /hidden/secret_folder/info.txt created
+- 2024-01-18 14:00:00 - File /evidence/clue.pdf modified
+- 2024-01-18 14:05:00 - File /hidden/secret_folder/info.txt modified
+- 2024-01-18 14:10:00 - File /hidden/backup_data.bin modified
+[HINT] Focus on events around 2024-01-18—significant activity may point to the flag.
